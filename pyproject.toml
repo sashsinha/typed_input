@@ -1,0 +1,9 @@
+[project]
+name = "typed-input"
+version = "0.1.0"
+description = "Effortless type-safe user input for integers, floats, dates, and more..."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "ruff>=0.7.4",
+]
