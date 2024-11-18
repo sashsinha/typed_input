@@ -88,7 +88,7 @@ def int_input(
   min_value: int | None = None,
   max_value: int | None = None,
   default_value: int | None = None,
-  type_error_message: str | None = _DEFAULT_INT_INPUT_TYPE_ERROR,
+  type_error_message: str | None = None,
 ) -> int:
   """Prompts to enter an int, with optional default and range validation.
 
@@ -116,6 +116,8 @@ def int_input(
     ValueError: If `default_value` is specified but falls outside the range
       defined by `min_value` or `max_value`.
   """
+  if not type_error_message:
+    type_error_message = _DEFAULT_INT_INPUT_TYPE_ERROR
   return _generic_single_value_input(
     prompt=prompt,
     min_value=min_value,
@@ -131,7 +133,7 @@ def float_input(
   min_value: float | None = None,
   max_value: float | None = None,
   default_value: float | None = None,
-  type_error_message: str | None = _DEFAULT_FLOAT_INPUT_TYPE_ERROR,
+  type_error_message: str | None = None,
 ) -> float:
   """Prompts to enter a float, with optional default and range validation.
 
@@ -159,6 +161,8 @@ def float_input(
     ValueError: If `default_value` is specified but falls outside the range
       defined by `min_value` or `max_value`.
   """
+  if not type_error_message:
+    type_error_message = _DEFAULT_FLOAT_INPUT_TYPE_ERROR
   return _generic_single_value_input(
     prompt=prompt,
     min_value=min_value,
@@ -174,7 +178,7 @@ def decimal_input(
   min_value: Decimal | None = None,
   max_value: Decimal | None = None,
   default_value: Decimal | None = None,
-  type_error_message: str | None = _DEFAULT_DECIMAL_INPUT_TYPE_ERROR,
+  type_error_message: str | None = None,
 ) -> Decimal:
   """Prompts to enter a Decimal, with optional default and range validation.
 
@@ -202,6 +206,8 @@ def decimal_input(
     ValueError: If `default_value` is specified but falls outside the range
       defined by `min_value` or `max_value`.
   """
+  if not type_error_message:
+    type_error_message = _DEFAULT_DECIMAL_INPUT_TYPE_ERROR
   return _generic_single_value_input(
     prompt=prompt,
     min_value=min_value,
@@ -217,7 +223,7 @@ def datetime_input(
   min_value: datetime | None = None,
   max_value: datetime | None = None,
   default_value: datetime | None = None,
-  type_error_message: str = _DEFAULT_DATETIME_INPUT_TYPE_ERROR,
+  type_error_message: str | None = None,
 ) -> datetime:
   """Prompts to enter a datetime, with optional default and range validation.
 
@@ -247,6 +253,8 @@ def datetime_input(
     ValueError: If `default_value` is specified but falls outside the range
       defined by `min_value` or `max_value`.
   """
+  if not type_error_message:
+    type_error_message = _DEFAULT_DATETIME_INPUT_TYPE_ERROR
   return _generic_single_value_input(
     prompt=prompt,
     min_value=min_value,

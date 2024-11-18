@@ -5,6 +5,10 @@ description = "Effortless type-safe user input for integers, floats, dates, and 
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "mypy>=1.13.0",
     "parameterized>=0.9.0",
     "ruff>=0.7.4",
 ]
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]

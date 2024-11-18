@@ -9,3 +9,15 @@
 <p align="center">
 <a href="https://raw.githubusercontent.com/sashsinha/typed_input/main/LICENCE"><img alt="License: MIT" src="https://raw.githubusercontent.com/sashsinha/typed_input/main/license.svg"></a>
 </p>
+
+
+# 🛠️ Development
+
+- Run formater: 
+    - `uv run ruff check --select I --fix && uv run ruff format`
+- Run type checking: 
+    - `uv run mypy . `
+- Run all unit tests:
+    - `uv run typed_input_test.py`
+- Run specific unit test:
+    - `uv run python -m unittest int_input_test.py`
