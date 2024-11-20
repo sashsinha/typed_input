@@ -54,16 +54,66 @@ Each function has this structure:
 
 #### Default Type Error Messages:
 
-| Function           | Default `type_error_message`                                                                                            |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `int_input`        | **Error**: You must enter a valid integer.                                                                              |
-| `float_input`      | **Error**: You must enter a valid float.                                                                                |
-| `decimal_input`    | **Error**: You must enter a valid Decimal.                                                                              |
-| `datetime_input`   | **Error**: You must enter a valid datetime in valid ISO 8601 format e.g. YYYY-MM-DD.<br>See [documentation](https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat) for all allowed options.|
+| Function         | Default `type_error_message`                                                                                                                                                                                          |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `int_input`      | **Error**: You must enter a valid integer.                                                                                                                                                                            |
+| `float_input`    | **Error**: You must enter a valid float.                                                                                                                                                                              |
+| `decimal_input`  | **Error**: You must enter a valid Decimal.                                                                                                                                                                            |
+| `datetime_input` | **Error**: You must enter a valid datetime in valid ISO 8601 format e.g. YYYY-MM-DD.<br>See [documentation](https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat) for all allowed options. |
 
 ---
 
-### Example Usage
+Here's an updated README section to showcase how `typed_input` supports the same API as `input()`:
+
+---
+
+### 🧑‍💻 Seamless Input API Compatibility
+
+The `typed_input` library is designed to feel natural for Python developers by
+supporting the same API as the standard [`input()`](https://docs.python.org/3/library/functions.html#input) function. You can use it
+without providing a `prompt`, making it simple to integrate into existing
+REPL-style workflows.
+
+#### Example Usage (like [`input()`](https://docs.python.org/3/library/functions.html#input))
+```python
+>>> from typed_input import int_input
+>>> x = int_input()
+42
+>>> type(x)
+<class 'int'>
+
+>>> from typed_input import float_input
+>>> x = float_input()
+3.14
+>>> type(x)
+<class 'float'>
+
+>>> from typed_input import decimal_input
+>>> x = decimal_input()
+1.45
+>>> type(x)
+<class 'decimal.Decimal'>
+
+>>> from typed_input import datetime_input
+>>> dt = datetime_input()
+2024-01-01
+>>> type(dt)
+<class 'datetime.datetime'>
+```
+
+#### Example with a `prompt`
+Just like [`input()`](https://docs.python.org/3/library/functions.html#input), you can also pass a `prompt` to guide the user:
+```python
+>>> from typed_input import int_input
+>>> int_input('Enter a number: ')
+Enter a number: 7
+7
+```
+
+This compatibility makes `typed_input` a drop-in replacement for `input()` in 
+many scenarios, with the added benefit of type safety and validation!
+
+### More Examples
 
 #### `int_input` for validated integer input
 ```python

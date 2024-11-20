@@ -1,6 +1,6 @@
 [project]
 name = "typed-input"
-version = "1.2.1"
+version = "1.2.2"
 description = "Effortless type-safe user input for integers, floats, dates, and more..."
 authors = [
   {name = "Sash Sinha", email = "sashsinha1@gmail.com"}
