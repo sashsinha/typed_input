@@ -13,6 +13,20 @@ license = {file = "LICENSE"}
 keywords = ["typing", "input", "input-validation", "utilities",]
 requires-python = ">=3.10"
 dependencies = []
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Utilities",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python"
+]
 
 [project.optional-dependencies]
 dev = [
@@ -27,22 +41,7 @@ dev = [
   "parameterized",
 ]
 lint = [
-  "ruff>=0.7.4",
-]
-
-classifiers = [
-  "Development Status :: 5 - Production/Stable",
-  "Intended Audience :: Developers",
-  "Topic :: Utilities",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: MacOS",
-  "Operating System :: POSIX :: Linux",
-  "Operating System :: Microsoft :: Windows",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python"
+  "ruff>=0.7.4"
 ]
 
 [project.urls]
