@@ -67,6 +67,7 @@ Each function has this structure:
 
 #### `int_input` for validated integer input
 ```python
+>>> from typed_input import int_input
 >>> int_input(prompt="Enter a number (1-10): ", min_value=1, max_value=10)
 Enter a number (1-10): abc
 Error: You must enter a valid integer.
@@ -78,6 +79,7 @@ Enter a number (1-10): 5
 
 #### `float_input` for validated floating-point input
 ```python
+>>> from typed_input import float_input
 >>> float_input(prompt="Enter a temperature (-50 to 50): ", min_value=-50.0, max_value=50.0)
 Enter a temperature (-50 to 50): 
 Error: You must enter a valid float.
@@ -89,6 +91,7 @@ Enter a temperature (-50 to 50): 22.5
 
 #### `decimal_input` for validated decimal input
 ```python
+>>> from typed_input import decimal_input
 >>> from decimal import Decimal
 >>> decimal_input(prompt="Enter a price (min 0.01): ", min_value=Decimal("0.01"))
 Enter a price (min 0.01): -10
@@ -99,6 +102,7 @@ Decimal('19.99')
 
 #### `datetime_input` for validated datetime input
 ```python
+>>> from typed_input import datetime_input
 >>> from datetime import datetime
 >>> datetime_input(prompt="Enter a date (YYYY-MM-DD): ", min_value=datetime(2023, 1, 1))
 Enter a date (YYYY-MM-DD): invalid
