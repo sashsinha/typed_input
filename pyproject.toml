@@ -12,11 +12,24 @@ readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
 keywords = ["typing", "input", "input-validation", "utilities",]
 requires-python = ">=3.10"
-dependencies = [
-    "mypy>=1.13.0",
-    "parameterized>=0.9.0",
-    "ruff>=0.7.4",
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.13.0",
+  "ruff>=0.7.4"
 ]
+test = ["parameterized"]
+
+[dependency-groups]
+dev = [
+  "mypy>=1.13.0", 
+  "parameterized",
+]
+lint = [
+  "ruff>=0.7.4",
+]
+
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
