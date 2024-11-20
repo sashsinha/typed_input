@@ -29,10 +29,10 @@ uv add typed-input
 
 
 ### Supported Functions:
-- [`int_input`](#int_input---a)
-- [`float_input`](#float_input)
-- [`decimal_input`](#decimal_input)
-- [`datetime_input`](#datetime_input)
+- [`int_input`](#int_input-for-validated-integer-input)
+- [`float_input`](#float_input-for-validated-floating-point-input)
+- [`decimal_input`](#decimal_input-for-validated-decimal-input)
+- [`datetime_input`](#datetime_input-for-validated-datetime-input)
 
 Each function has this structure:
 
@@ -65,7 +65,7 @@ Each function has this structure:
 
 ### Example Usage
 
-#### `int_input` - Function for Integer Input
+#### `int_input` for validated integer input
 ```python
 >>> int_input(prompt="Enter a number (1-10): ", min_value=1, max_value=10)
 Enter a number (1-10): abc
@@ -76,7 +76,7 @@ Enter a number (1-10): 5
 5
 ```
 
-#### Floating-Point Input
+#### `float_input` for validated floating-point input
 ```python
 >>> float_input(prompt="Enter a temperature (-50 to 50): ", min_value=-50.0, max_value=50.0)
 Enter a temperature (-50 to 50): 
@@ -87,7 +87,7 @@ Enter a temperature (-50 to 50): 22.5
 22.5
 ```
 
-#### Decimal Input
+#### `decimal_input` for validated decimal input
 ```python
 >>> from decimal import Decimal
 >>> decimal_input(prompt="Enter a price (min 0.01): ", min_value=Decimal("0.01"))
@@ -97,7 +97,7 @@ Enter a price (min 0.01): 19.99
 Decimal('19.99')
 ```
 
-#### Datetime Input
+#### `datetime_input` for validated datetime input
 ```python
 >>> from datetime import datetime
 >>> datetime_input(prompt="Enter a date (YYYY-MM-DD): ", min_value=datetime(2023, 1, 1))
