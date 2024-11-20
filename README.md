@@ -8,7 +8,24 @@
 
 <p align="center">
 <a href="https://raw.githubusercontent.com/sashsinha/typed_input/main/LICENCE"><img alt="License: MIT" src="https://raw.githubusercontent.com/sashsinha/typed_input/main/license.svg"></a>
+<a href="https://pypi.org/project/typed-input/"><img src="https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-lightgrey" alt="Supported Platforms"></a>
+<a href="https://pypi.org/project/typed-input/"><img 
+alt="PyPI Supported Versions" src="https://img.shields.io/pypi/pyversions/typed-input.svg"></a>
+<a href="https://pypi.org/project/typed-input/"><img alt="PyPI" src="https://img.shields.io/pypi/v/typed-input"></a>
+<a href="https://pypi.org/project/typed-input/"><img alt="PyPI Status" src="https://img.shields.io/pypi/status/typed-input"></a>
 </p>
+
+### Installation
+
+#### PyPI
+```
+pip install typed-input
+```
+
+#### [`uv`](https://github.com/astral-sh/uv)
+```
+uv add typed-input
+```
 
 
 ### Supported Functions:
@@ -48,7 +65,7 @@ Each function has this structure:
 
 ### Example Usage
 
-#### `int_input` - Function for  Integer Input
+#### `int_input` - Function for Integer Input
 ```python
 >>> int_input(prompt="Enter a number (1-10): ", min_value=1, max_value=10)
 Enter a number (1-10): abc
