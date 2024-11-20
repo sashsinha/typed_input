@@ -1,5 +1,7 @@
 """Effortless type-safe user input for integers, floats, dates, and more..."""
 
+from __future__ import annotations
+
 import decimal
 import sys
 from datetime import datetime
