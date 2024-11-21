@@ -6,6 +6,8 @@
 
 <h3 align="center">Effortless type-safe user input for integers, floats, dates, and more...</h3>
 
+<br/>
+
 <p align="center">
 <a href="https://raw.githubusercontent.com/sashsinha/typed_input/main/LICENCE"><img alt="License: MIT" src="https://raw.githubusercontent.com/sashsinha/typed_input/main/license.svg"></a>
 <a href="https://pypi.org/project/typed-input/"><img src="https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-lightgrey" alt="Supported Platforms"></a>
