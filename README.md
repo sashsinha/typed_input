@@ -64,12 +64,6 @@ Each function has this structure:
 | `decimal_input`  | **Error**: You must enter a valid Decimal.                                                                                                                                                                            |
 | `datetime_input` | **Error**: You must enter a valid datetime in valid ISO 8601 format e.g. YYYY-MM-DD.<br>See [documentation](https://docs.python.org/3/library/datetime.html#datetime.datetime.fromisoformat) for all allowed options. |
 
----
-
-Here's an updated README section to showcase how `typed_input` supports the same API as `input()`:
-
----
-
 ### Seamless Input API Compatibility
 
 The `typed_input` library is designed to feel natural for Python developers by
