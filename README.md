@@ -13,6 +13,7 @@
 alt="PyPI Supported Versions" src="https://img.shields.io/pypi/pyversions/typed-input.svg"></a>
 <a href="https://pypi.org/project/typed-input/"><img alt="PyPI" src="https://img.shields.io/pypi/v/typed-input"></a>
 <a href="https://pypi.org/project/typed-input/"><img alt="PyPI Status" src="https://img.shields.io/pypi/status/typed-input"></a>
+<a href="https://pepy.tech/project/typed-input"><img alt="Downloads" src="https://pepy.tech/badge/typed-input"></a>
 </p>
 
 ### Installation
@@ -67,20 +68,22 @@ Here's an updated README section to showcase how `typed_input` supports the same
 
 ---
 
-### 🧑‍💻 Seamless Input API Compatibility
+### Seamless Input API Compatibility
 
 The `typed_input` library is designed to feel natural for Python developers by
-supporting the same API as the standard [`input()`](https://docs.python.org/3/library/functions.html#input) function. You can use it
-without providing a `prompt`, making it simple to integrate into existing
-REPL-style workflows.
+supporting the same API as the standard [`input()`](https://docs.python.org/3/library/functions.html#input) function.
 
 #### Example Usage (like [`input()`](https://docs.python.org/3/library/functions.html#input))
 ```python
 >>> from typed_input import int_input
 >>> x = int_input()
+a
+Error: You must enter a valid integer.
 42
 >>> type(x)
 <class 'int'>
+>>> x
+42
 
 >>> from typed_input import float_input
 >>> x = float_input()
@@ -113,7 +116,7 @@ Enter a number: 7
 This compatibility makes `typed_input` a drop-in replacement for `input()` in 
 many scenarios, with the added benefit of type safety and validation!
 
-### More Examples
+### More Examples Showing Range Validation
 
 #### `int_input` for validated integer input
 ```python
